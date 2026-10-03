@@ -3,3 +3,7 @@ tmp/pdfs/challenge-*.png
 tmp/pdfs/paper-text/
 tmp/pdfs/qa/
 pdf_check.png
+**/tmp/
+**/__pycache__/
+*.py[cod]
+挑战二/_sglang_v0.5.14_source/

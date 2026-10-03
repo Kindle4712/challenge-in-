@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "client": "Windows Python standard library, HTTP proxy disabled",
+  "base_url": "http://127.0.0.1:30000",
+  "seed": 2026,
+  "requests_per_group": 32,
+  "max_concurrency": 8,
+  "shared_prefix_tokens": 2048,
+  "independent_suffix_tokens": 64,
+  "prompt_tokens": 2112,
+  "temperature": 0,
+  "max_new_tokens": 16,
+  "ignore_eos": true,
+  "sampling_seed": 2026
+}

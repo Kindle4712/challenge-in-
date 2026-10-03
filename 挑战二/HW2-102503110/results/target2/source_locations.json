@@ -1,0 +1,206 @@
+{
+  "PrefillAdder": [
+    {
+      "file": "sglang/srt/managers/schedule_policy.py",
+      "line": 425,
+      "kind": "ClassDef"
+    }
+  ],
+  "RadixCache": [
+    {
+      "file": "sglang/srt/mem_cache/radix_cache.py",
+      "line": 285,
+      "kind": "ClassDef"
+    }
+  ],
+  "ScheduleBatch": [
+    {
+      "file": "sglang/srt/managers/schedule_batch.py",
+      "line": 1671,
+      "kind": "ClassDef"
+    }
+  ],
+  "Scheduler": [
+    {
+      "file": "sglang/srt/managers/scheduler.py",
+      "line": 292,
+      "kind": "ClassDef"
+    }
+  ],
+  "TokenizerManager": [
+    {
+      "file": "sglang/srt/managers/tokenizer_manager.py",
+      "line": 238,
+      "kind": "ClassDef"
+    }
+  ],
+  "cache_finished_req": [
+    {
+      "file": "sglang/srt/mem_cache/base_prefix_cache.py",
+      "line": 250,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/chunk_cache.py",
+      "line": 79,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/mamba_radix_cache.py",
+      "line": 516,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/radix_cache.py",
+      "line": 438,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/radix_cache_cpp.py",
+      "line": 172,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/swa_radix_cache.py",
+      "line": 438,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/unified_radix_cache.py",
+      "line": 705,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/storage/lmcache/lmc_radix_cache.py",
+      "line": 431,
+      "kind": "FunctionDef"
+    }
+  ],
+  "cache_unfinished_req": [
+    {
+      "file": "sglang/srt/mem_cache/base_prefix_cache.py",
+      "line": 254,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/chunk_cache.py",
+      "line": 87,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/mamba_radix_cache.py",
+      "line": 625,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/radix_cache.py",
+      "line": 485,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/radix_cache_cpp.py",
+      "line": 210,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/swa_radix_cache.py",
+      "line": 487,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/unified_radix_cache.py",
+      "line": 780,
+      "kind": "FunctionDef"
+    }
+  ],
+  "event_loop_normal": [
+    {
+      "file": "sglang/srt/managers/scheduler.py",
+      "line": 1505,
+      "kind": "FunctionDef"
+    }
+  ],
+  "generate_request": [
+    {
+      "file": "sglang/srt/entrypoints/http_server.py",
+      "line": 769,
+      "kind": "AsyncFunctionDef"
+    },
+    {
+      "file": "sglang/srt/managers/tokenizer_manager.py",
+      "line": 576,
+      "kind": "AsyncFunctionDef"
+    }
+  ],
+  "get_new_batch_prefill": [
+    {
+      "file": "sglang/srt/managers/scheduler.py",
+      "line": 2702,
+      "kind": "FunctionDef"
+    }
+  ],
+  "match_prefix": [
+    {
+      "file": "sglang/srt/mem_cache/base_prefix_cache.py",
+      "line": 243,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/chunk_cache.py",
+      "line": 67,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/hiradix_cache.py",
+      "line": 1438,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/hi_mamba_radix_cache.py",
+      "line": 945,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/mamba_radix_cache.py",
+      "line": 473,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/radix_cache.py",
+      "line": 358,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/radix_cache_cpp.py",
+      "line": 101,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/swa_radix_cache.py",
+      "line": 389,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/unified_radix_cache.py",
+      "line": 562,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/cpp_radix_tree/radix_tree.py",
+      "line": 52,
+      "kind": "FunctionDef"
+    },
+    {
+      "file": "sglang/srt/mem_cache/storage/lmcache/lmc_radix_cache.py",
+      "line": 179,
+      "kind": "FunctionDef"
+    }
+  ],
+  "match_prefix_for_req": [
+    {
+      "file": "sglang/srt/managers/schedule_policy.py",
+      "line": 85,
+      "kind": "FunctionDef"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "eb7a384a7517fb632d1eec229e1e8ed0a2ed935a56e2022b2d890801488a274c",
+  "files_sha256": {
+    "mooncake_trace.jsonl": "b434f1816a707f4bac697235588184ebc374c9907cb981bb65fb0643471fe711",
+    "mooncake_workload_results_retry.jsonl": "94b58c4bf5ea693b9db5c268d7486cd7592b80f4e56c0fa5b39ad98d6dbbf47c",
+    "mooncake_workload_results.jsonl": "7366545a515cbbc154625b73629b22221b1b505851beb3eb3c30f1094efc12b4",
+    "workload_results.jsonl": "7fd86c8a8b2b1c122f51bc75aedc27aa952675f6f3718d152a985b19afb6555b"
+  },
+  "trace_records": 23608,
+  "retry_records": 10,
+  "retry_successful": 10,
+  "screenshot_recovery_fields_match": true,
+  "trace_first_10_length_pairs_match": true,
+  "actual_prompt_tokens": [
+    3000
+  ],
+  "reported_prompt_tokens": [
+    3008
+  ],
+  "completion_tokens": [
+    8,
+    19,
+    20,
+    32
+  ],
+  "latency_mean_s": 0.6294,
+  "sampling_replay_scripts_found": false,
+  "poisson_verified": false,
+  "length_conversion_verified": false
+}

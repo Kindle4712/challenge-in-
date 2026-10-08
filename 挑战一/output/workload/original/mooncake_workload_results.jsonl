@@ -1,0 +1,10 @@
+{"request_id": 1, "trace_input_length": 6755, "trace_output_length": 500, "actual_input_length": 3000, "actual_output_limit": 64, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.091}
+{"request_id": 2, "trace_input_length": 7319, "trace_output_length": 490, "actual_input_length": 3000, "actual_output_limit": 64, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.025}
+{"request_id": 3, "trace_input_length": 7234, "trace_output_length": 794, "actual_input_length": 3000, "actual_output_limit": 64, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.01}
+{"request_id": 4, "trace_input_length": 2287, "trace_output_length": 316, "actual_input_length": 2287, "actual_output_limit": 64, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.017}
+{"request_id": 5, "trace_input_length": 9013, "trace_output_length": 3, "actual_input_length": 3000, "actual_output_limit": 8, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.008}
+{"request_id": 6, "trace_input_length": 6506, "trace_output_length": 3, "actual_input_length": 3000, "actual_output_limit": 8, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.009}
+{"request_id": 7, "trace_input_length": 4824, "trace_output_length": 173, "actual_input_length": 3000, "actual_output_limit": 64, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.01}
+{"request_id": 8, "trace_input_length": 3119, "trace_output_length": 20, "actual_input_length": 3000, "actual_output_limit": 20, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.009}
+{"request_id": 9, "trace_input_length": 23090, "trace_output_length": 453, "actual_input_length": 3000, "actual_output_limit": 64, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.015}
+{"request_id": 10, "trace_input_length": 3135, "trace_output_length": 19, "actual_input_length": 3000, "actual_output_limit": 19, "status": "error", "error": "HTTP Error 400: Bad Request", "latency_seconds": 0.013}

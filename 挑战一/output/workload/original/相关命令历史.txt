@@ -1,0 +1,59 @@
+112: wget -O mooncake_trace.jsonl https://raw.githubusercontent.com/kvcache-ai/Mooncake/main/FAST25-release/arxiv-trace/mooncake_trace.jsonl
+116: wget -O mooncake_trace.jsonl "https://gh-proxy.com/https://raw.githubusercontent.com/kvcache-ai/Mooncake/main/FAST25-release/arxiv-trace/mooncake_trace.jsonl"
+228: conda activate sglang310
+229: python -c "import transformers; print('transformers', transformers.__version__)"
+230: cd ~/llm-challenge
+231: python - <<'PY'
+232: import json, random, time, urllib.request, urllib.error
+233: from transformers import AutoTokenizer
+234: model_path = f"{__import__('os').path.expanduser('~')}/models/Qwen3-0.6B"
+235: tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=False)
+236: url = "http://127.0.0.1:30000/v1/chat/completions"
+237: result_file = "mooncake_workload_results_retry.jsonl"
+238: with open("mooncake_trace.jsonl", encoding="utf-8") as f:
+239:     traces = [json.loads(line) for line in f if line.strip()][:10]
+240: with open(result_file, "w", encoding="utf-8") as out:
+241:     for request_id, item in enumerate(traces, 1):
+242:         original_input = int(item["input_length"])
+243:         original_output = int(item["output_length"])
+244:         text = "请分析下面的安全测试文本并给出简短结论。\n" + "安全测试文本。" * 5000
+245:         token_ids = tokenizer.encode(text, add_special_tokens=False)[:3000]
+246:         prompt = tokenizer.decode(token_ids)
+247:         output_limit = min(max(original_output, 8), 32)
+248:         payload = {
+249:             "model": "Qwen/Qwen3-0.6B",
+250:             "messages": [{"role": "user", "content": prompt}],
+251:             "max_tokens": output_limit,
+252:         }
+253:         start = time.time()
+254:         record = {
+255:             "request_id": request_id,
+256:             "trace_input_length": original_input,
+257:             "trace_output_length": original_output,
+258:             "actual_prompt_tokens": len(token_ids),
+259:             "max_output_tokens": output_limit,
+260:         }
+261:         try:
+262:             req = urllib.request.Request(
+263:                 url, data=json.dumps(payload).encode(),
+264:                 headers={"Content-Type": "application/json"}, method="POST"
+265:             )
+266:             with urllib.request.urlopen(req, timeout=120) as response:
+267:                 data = json.loads(response.read().decode())
+268:             record["status"] = "ok"
+269:             record["prompt_tokens"] = data.get("usage", {}).get("prompt_tokens")
+270:             record["completion_tokens"] = data.get("usage", {}).get("completion_tokens")
+271:         except urllib.error.HTTPError as e:
+272:             record["status"] = "error"
+273:             record["http_status"] = e.code
+274:             record["error_detail"] = e.read().decode("utf-8", errors="replace")[:1000]
+275:         except Exception as e:
+276:             record["status"] = "error"
+277:             record["error_detail"] = str(e)
+278:         record["latency_seconds"] = round(time.time() - start, 3)
+279:         out.write(json.dumps(record, ensure_ascii=False) + "\n")
+280:         out.flush()
+281:         print(json.dumps(record, ensure_ascii=False))
+282:         time.sleep(random.expovariate(2.0))
+283: print(f"结果已保存到: {result_file}")
+284: PY

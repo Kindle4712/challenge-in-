@@ -24,7 +24,17 @@
     32
   ],
   "latency_mean_s": 0.6294,
-  "sampling_replay_scripts_found": false,
+  "sampling_replay_scripts_found": true,
   "poisson_verified": false,
-  "length_conversion_verified": false
+  "length_conversion_verified": true,
+  "script_source": "shell history entries 232-283; extracted, not rerun",
+  "sampling_method": "first 10 nonempty JSONL records",
+  "trace_source_url": "https://raw.githubusercontent.com/kvcache-ai/Mooncake/main/FAST25-release/arxiv-trace/mooncake_trace.jsonl",
+  "length_conversion_scope": "code recovered; encode synthetic repeated text without special tokens, take first 3000 IDs, decode into user message; no fresh tokenizer execution",
+  "inter_request_sleep_rate_s_inverse": 2.0,
+  "arrival_process": "serial request completion followed by exponential sleep; not independent Poisson arrivals",
+  "random_seed_recorded": false,
+  "send_timestamps_recorded": false,
+  "server_prompt_overhead_8_tokens_verified": false,
+  "restored_script_sha256": "acce38b4eea90128b27f073ee66dcf35719a4ae469138c42babbd8d9703c1142"
 }

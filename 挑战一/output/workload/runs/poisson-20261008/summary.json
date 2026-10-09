@@ -1,0 +1,9 @@
+{
+  "count": 10,
+  "successes": 0,
+  "errors": 10,
+  "mean_success_latency_seconds": null,
+  "max_dispatch_lateness_seconds": 0.004512887312039027,
+  "successful_token_counts_present": true,
+  "note": "length-filtered synthetic workload, original lengths retained; no cache-performance or TTFT conclusion"
+}

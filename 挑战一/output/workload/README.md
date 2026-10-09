@@ -1,6 +1,12 @@
 # Mooncake 工作负载原始数据与核验
 
-2026-10-08 从用户提供的 Linux 目录 ~/llm-challenge 备份 challenge1-original-evidence.tar.gz 找回原始文件。original/ 中的文件从归档直接读取并按原字节保存；SHA256 和核验结果见 原始数据核验.json。
+## 当前修正实验
+
+修正实验已实际完成：从输入 1–3000 token、输出 1–512 token 的 2708 条候选 trace 中，用随机种子 20261008 采样 10 条，保留各条原始输入长度与输出上限。独立累计指数间隔生成 Poisson 到达时间，λ=0.5 请求/秒；客户端按计划发送，不等待上一请求完成。10/10 请求成功，平均 latency 为 1.3982 秒，最大调度偏差为 4.38 毫秒。实际输出允许因 EOS 提前结束，已记录 finish_reason。服务输入计数与本地 chat template 一致，均比合成正文多 8 token；此核验仅适用于新轮次。没有测量 TTFT 或缓存性能，不能据此宣称论文优化收益。
+
+正式结果目录：`runs/poisson-20261008-pytorch`，含 config、plan、results、summary、environment 和 validation。`runs/poisson-20261008` 是服务崩溃导致的失败轮，不能混合统计。采样范围经过长度筛选，不代表完整 trace 分布。历史数据及以下历史方法说明保持为旧轮次描述。公开仓库上传和收集表提交状态尚未核实。
+
+原始文件来自 Linux 目录 ~/llm-challenge 的备份 challenge1-original-evidence.tar.gz。original/ 中的文件从归档直接读取并按原字节保存；SHA256 和核验结果见 原始数据核验.json。
 
 ## 文件说明
 
@@ -16,7 +22,7 @@
 
 ## 从命令历史找回的方法
 
-2026-10-08 用户复制了 Linux shell 历史。已从历史条目 232–283 原样提取 replay_mooncake_history.py，完整 Python 语法解析通过，未重新运行。相关命令摘录见 original/相关命令历史.txt；历史只证明命令被记录，不能单独证明每次执行成功。脚本字段、前 10 条长度对及结果文件名与找回的重试结果一致。
+replay_mooncake_history.py 从 Linux shell 历史条目 232–283 原样提取，完整 Python 语法解析通过，未重新运行。相关命令摘录见 original/相关命令历史.txt；历史只证明命令被记录，不能单独证明每次执行成功。脚本字段、前 10 条长度对及结果文件名与找回的重试结果一致。
 
 trace 下载命令指向 Mooncake 仓库 FAST25-release/arxiv-trace/mooncake_trace.jsonl；另有使用 gh-proxy.com 下载同一目标 URL 的记录。未记录上游 commit，当前归档字节由 SHA256 固定。
 

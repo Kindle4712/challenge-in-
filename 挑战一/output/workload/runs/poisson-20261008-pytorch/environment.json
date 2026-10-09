@@ -1,0 +1,57 @@
+{
+  "python": "3.10.21",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "packages": {
+    "sglang": "0.5.14",
+    "ray": "2.56.0",
+    "torch": "2.11.0",
+    "transformers": "5.8.1"
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 592.00",
+  "launch_arguments": "--model-path /home/kindl/models/Qwen3-0.6B --served-model-name Qwen/Qwen3-0.6B --host 127.0.0.1 --port 30000 --context-length 4096 --mem-fraction-static 0.65 --max-running-requests 4 --attention-backend triton --sampling-backend pytorch --cuda-graph-backend-prefill disabled",
+  "models_response": {
+    "object": "list",
+    "data": [
+      {
+        "id": "Qwen/Qwen3-0.6B",
+        "object": "model",
+        "created": 1791557075,
+        "owned_by": "sglang",
+        "root": "Qwen/Qwen3-0.6B",
+        "parent": null,
+        "max_model_len": 4096
+      }
+    ]
+  },
+  "single_request_status": 200,
+  "single_request_response": {
+    "id": "494a4c7359984d93910f02bbc8c87047",
+    "object": "chat.completion",
+    "created": 1791557082,
+    "model": "Qwen/Qwen3-0.6B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "<think>\n好的，用户让我用一句话介绍SGLang。首先，我需要确认SGLang是什么。SGLang可能是指Simplified General Language",
+          "reasoning_content": null,
+          "tool_calls": null
+        },
+        "logprobs": null,
+        "finish_reason": "length",
+        "matched_stop": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 16,
+      "total_tokens": 48,
+      "completion_tokens": 32,
+      "prompt_tokens_details": null,
+      "reasoning_tokens": 0
+    },
+    "metadata": {
+      "weight_version": "default"
+    }
+  }
+}

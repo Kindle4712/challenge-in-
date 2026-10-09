@@ -1,0 +1,49 @@
+{
+  "trace": "/mnt/c/Users/kindl/Desktop/训练营/挑战一/output/workload/original/mooncake_trace.jsonl",
+  "model_path": "/home/kindl/models/Qwen3-0.6B",
+  "url": "http://127.0.0.1:30000",
+  "out": "/mnt/c/Users/kindl/Desktop/训练营/挑战一/output/workload/runs/poisson-20261008-pytorch",
+  "count": 10,
+  "rate": 0.5,
+  "seed": 20261008,
+  "context_length": 4096,
+  "input_budget": 3000,
+  "output_budget": 512,
+  "trace_sha256": "b434f1816a707f4bac697235588184ebc374c9907cb981bb65fb0643471fe711",
+  "sampled_indices": [
+    1724,
+    3495,
+    6055,
+    8231,
+    8392,
+    9101,
+    10578,
+    11009,
+    11663,
+    16324
+  ],
+  "input_scale": 1.0,
+  "output_scale": 1.0,
+  "eligible_records": 2708,
+  "sampling": "seeded random sample within declared length budgets; lengths unchanged",
+  "models_response": {
+    "object": "list",
+    "data": [
+      {
+        "id": "Qwen/Qwen3-0.6B",
+        "object": "model",
+        "created": 1791473916,
+        "owned_by": "sglang",
+        "root": "Qwen/Qwen3-0.6B",
+        "parent": null,
+        "max_model_len": 4096
+      }
+    ]
+  },
+  "model": "Qwen/Qwen3-0.6B",
+  "versions": {
+    "transformers": "5.8.1"
+  },
+  "arrival_process": "independent cumulative exponential intervals; open loop",
+  "results_status": "completed; see results.jsonl and summary.json"
+}

@@ -1,0 +1,18 @@
+{
+  "checks_passed": true,
+  "count": 10,
+  "successes": 10,
+  "mean_latency_seconds": 1.3982302154001445,
+  "max_dispatch_lateness_seconds": 0.004375956310859408,
+  "overlapping_requests_confirmed": true,
+  "sampling_and_arrivals_regenerated": true,
+  "trace_lengths_retained": true,
+  "server_tokens_match_local_chat_template": true,
+  "sha256": {
+    "config.json": "e5812e6867fc21d1fdcefa94a0caf410725556e8917539c4f611105f84fa78da",
+    "environment.json": "2ee22f4f665ba93f68bb775795106a5cfa198b3702314c2d1c41c87512458efd",
+    "plan.json": "4ffb6204e9cdc8b55102904361416a868b5a5f13cf81bc0f82fc6f7cb14316eb",
+    "results.jsonl": "ff2bf27b05ef8ee469a278dfbabde47c41bc6f6e32e561880215fc245c8730f1",
+    "summary.json": "08e2682fcd9bcfdb172b3bec98ca3d486161bd054404420d810e8ba820a27eb6"
+  }
+}
